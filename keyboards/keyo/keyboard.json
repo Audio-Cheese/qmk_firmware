@@ -1,0 +1,189 @@
+{
+    "manufacturer": "Chris",
+    "keyboard_name": "keyo",
+    "maintainer": "Audio-Cheese",
+    "development_board": "promicro_rp2040",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "oled": true,
+        "rgb_matrix": true
+    },
+    "matrix_pins": {
+        "cols": ["GP10", "GP0", "GP1", "GP11", "GP28"],
+        "rows": ["GP29", "GP27", "GP26", "GP22"]
+    },
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+    "suspend_wakeup_delay": 200,
+        "pid": "0x0000",
+        "vid": "0xFEED"
+    },
+    "bootmagic": {
+        "matrix": [0, 1]
+    },
+    "split": {
+        "enabled": true,
+        "bootmagic": {
+            "matrix": [4, 1]
+        },
+        "serial": {
+            "driver": "vendor"
+        },
+        "transport": {
+            "protocol": "serial",
+            "watchdog": true,            
+            "sync": {
+                "matrix_state": true,
+                "layer_state": true
+            }
+        },
+        "usb_detect": {
+            "timeout": 500
+        }        
+    },
+    "layouts": {
+        "LAYOUT_split_3x5_3": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0.47},
+                {"matrix": [0, 1], "x": 1, "y": 0.18},
+                {"matrix": [0, 2], "x": 2, "y": 0},
+                {"matrix": [0, 3], "x": 3, "y": 0.41},
+                {"matrix": [0, 4], "x": 4, "y": 0.29},
+
+                {"matrix": [4, 4], "x": 9, "y": 0.47},
+                {"matrix": [4, 3], "x": 10, "y": 0.18},
+                {"matrix": [4, 2], "x": 11, "y": 0},
+                {"matrix": [4, 1], "x": 12, "y": 0.41},
+                {"matrix": [4, 0], "x": 13, "y": 0.29},
+
+                {"matrix": [1, 0], "x": 0, "y": 1.47},
+                {"matrix": [1, 1], "x": 1, "y": 1.18},
+                {"matrix": [1, 2], "x": 2, "y": 1},
+                {"matrix": [1, 3], "x": 3, "y": 1.41},
+                {"matrix": [1, 4], "x": 4, "y": 1.29},
+
+                {"matrix": [5, 4], "x": 9, "y": 1.47},
+                {"matrix": [5, 3], "x": 10, "y": 1.18},
+                {"matrix": [5, 2], "x": 11, "y": 1},
+                {"matrix": [5, 1], "x": 12, "y": 1.41},
+                {"matrix": [5, 0], "x": 13, "y": 1.29},
+
+                {"matrix": [2, 0], "x": 0, "y": 2.47},
+                {"matrix": [2, 1], "x": 1, "y": 2.18},
+                {"matrix": [2, 2], "x": 2, "y": 2},
+                {"matrix": [2, 3], "x": 3, "y": 2.41},
+                {"matrix": [2, 4], "x": 4, "y": 2.29},
+
+                {"matrix": [6, 4], "x": 9, "y": 2.47},
+                {"matrix": [6, 3], "x": 10,"y": 2.18},
+                {"matrix": [6, 2], "x": 11,"y": 2},
+                {"matrix": [6, 1], "x": 12,"y": 2.41},
+                {"matrix": [6, 0], "x": 13,"y": 2.29},
+
+                {"matrix": [3, 4], "x": 4, "y": 3},
+                {"matrix": [3, 3], "x": 5, "y": 3.2},
+                {"matrix": [3, 2], "x": 6, "y": 3.4},
+
+                {"matrix": [7, 2], "x": 7, "y": 3.4},
+                {"matrix": [7, 3], "x": 8, "y": 3.2},
+                {"matrix": [7, 4], "x": 9, "y": 3}
+            ]
+        }
+    },
+   "ws2812": {
+        "driver": "vendor",
+        "pin": "GP20"
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "led_count": 36,
+        "split": true,
+        "split_count": [18,18],
+        "layout": [
+            {"matrix": [3, 2], "x": 112, "y": 64, "flags": 4},             
+            {"matrix": [3, 3], "x": 96, "y": 57, "flags": 4},         
+            {"matrix": [3, 4], "x": 80, "y": 50, "flags": 4},
+            {"matrix": [2, 4], "x": 80, "y": 34, "flags": 4},
+            {"matrix": [1, 4], "x": 80, "y": 18, "flags": 4},
+            {"matrix": [0, 4], "x": 80, "y": 2, "flags": 4},
+            {"matrix": [0, 3], "x": 64, "y": 4, "flags": 4},
+            {"matrix": [1, 3], "x": 64, "y": 20, "flags": 4},
+            {"matrix": [2, 3], "x": 64, "y": 36, "flags": 4},
+            {"matrix": [2, 2], "x": 32, "y": 32, "flags": 4},
+            {"matrix": [1, 2], "x": 32, "y": 16, "flags": 4},
+            {"matrix": [0, 2], "x": 32, "y": 0, "flags": 4},
+            {"matrix": [0, 1], "x": 16, "y": 3, "flags": 4},
+            {"matrix": [1, 1], "x": 16, "y": 19, "flags": 4},
+            {"matrix": [2, 1], "x": 16, "y": 39, "flags": 4},
+            {"matrix": [2, 0], "x": 0, "y": 40, "flags": 4},
+            {"matrix": [1, 0], "x": 0, "y": 24, "flags": 4},
+            {"matrix": [0, 0], "x": 0, "y": 8, "flags": 4},
+
+            {"matrix": [7, 2], "x": 128, "y": 64, "flags": 4},
+            {"matrix": [7, 3], "x": 144, "y": 57, "flags": 4},
+            {"matrix": [7, 4], "x": 160, "y": 50, "flags": 4},
+            {"matrix": [6, 4], "x": 160, "y": 34, "flags": 4},
+            {"matrix": [5, 4], "x": 160, "y": 18, "flags": 4},
+            {"matrix": [4, 4], "x": 160, "y": 2, "flags": 4},
+            {"matrix": [4, 3], "x": 176, "y": 4, "flags": 4},
+            {"matrix": [5, 3], "x": 176, "y": 20, "flags": 4},
+            {"matrix": [6, 3], "x": 176, "y": 36, "flags": 4},
+            {"matrix": [6, 2], "x": 192, "y": 32, "flags": 4},
+            {"matrix": [5, 2], "x": 192, "y": 16, "flags": 4},
+            {"matrix": [4, 2], "x": 192, "y": 0, "flags": 4},
+            {"matrix": [4, 1], "x": 208, "y": 3 , "flags": 4},
+            {"matrix": [5, 1], "x": 208, "y": 19, "flags": 4},
+            {"matrix": [6, 1], "x": 208, "y": 39, "flags": 4},
+            {"matrix": [6, 0], "x": 224, "y": 40, "flags": 4},
+            {"matrix": [5, 0], "x": 224, "y": 24, "flags": 4},
+            {"matrix": [4, 0], "x": 224, "y": 8, "flags": 4}
+        ],
+        "max_brightness": 50,
+        "animations": {
+            "alphas_mods": true,
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "breathing": true,
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "cycle_all": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "pixel_fractal": true,
+            "pixel_flow": true,
+            "pixel_rain": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_multinexus": true,
+            "splash": true,
+            "multisplash": true,
+            "solid_splash": true,
+            "solid_multisplash": true
+        },
+        "sleep": true
+    }
+}
